@@ -1,28 +1,90 @@
-import js from '@eslint/js'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
-import globals from 'globals'
-import tseslint from 'typescript-eslint'
+import js from "@eslint/js";
+import reactHooks from "eslint-plugin-react-hooks";
+import reactRefresh from "eslint-plugin-react-refresh";
+import globals from "globals";
+import tseslint from "typescript-eslint";
 
 export default tseslint.config(
-  { ignores: ['dist'] },
+  { ignores: ["dist"] },
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
-    files: ['**/*.{ts,tsx}'],
+    files: ["**/*.{ts,tsx}"],
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
     },
     plugins: {
-      'react-hooks': reactHooks,
-      'react-refresh': reactRefresh,
+      "react-hooks": reactHooks,
+      "react-refresh": reactRefresh,
     },
     rules: {
+      "prefer-const": "error",
+      "no-await-in-loop": "error",
+      "require-atomic-updates": "error",
+      "no-unused-private-class-members": "error",
+      "no-unreachable-loop": "error",
+      "no-unmodified-loop-condition": "error",
+      "no-template-curly-in-string": "error",
+      "no-self-compare": "error",
+      "no-new-native-nonconstructor": "error",
+      "no-duplicate-imports": "error",
+      "no-constructor-return": "error",
+      "no-constant-binary-expression": "error",
+      "array-callback-return": "error",
+      "no-script-url": "error",
+      "no-return-assign": "error",
+      "no-proto": "error",
+      "no-plusplus": "error",
+      "no-param-reassign": "error",
+      "no-octal-escape": "error",
+      "no-new-wrappers": "error",
+      "no-new-func": "error",
+      "no-new": "error",
+      "no-nested-ternary": "error",
+      "no-multi-str": "error",
+      "no-multi-assign": "error",
+      "no-loop-func": "error",
+      "no-lonely-if": "error",
+      "no-lone-blocks": "error",
+      "no-labels": "error",
+      "no-iterator": "error",
+      "no-invalid-this": "error",
+      "no-implied-eval": "error",
+      "no-eval": "error",
+      "no-implicit-globals": "error",
+      "no-extend-native": "error",
+      "no-bitwise": "error",
+      "no-alert": "error",
+      "new-cap": "error",
+      "eqeqeq": "error",
+      "default-param-last": "error",
+      "default-case-last": "error",
+      "default-case": "error",
+      "symbol-description": "error",
+      "require-await": "error",
+      "radix": "error",
+      "prefer-template": "error",
+      "prefer-rest-params": "error",
+      "object-shorthand": "error",
+      "no-var": "error",
+      "no-useless-return": "error",
+      "no-useless-rename": "error",
+      "no-useless-constructor": "error",
+      "no-useless-concat": "error",
+      "no-useless-computed-key": "error",
+      "no-unneeded-ternary": "error",
+      "no-undef-init": "error",
+      "no-throw-literal": "error",
+      "arrow-body-style": "error",
+      "@typescript-eslint/consistent-type-imports": "error",
+      "@typescript-eslint/no-import-type-side-effects": "error",
+      "max-params": ["error", 3],
+      "no-console": "warn",
       ...reactHooks.configs.recommended.rules,
-      'react-refresh/only-export-components': [
-        'warn',
+      "react-refresh/only-export-components": [
+        "warn",
         { allowConstantExport: true },
       ],
     },
-  },
-)
+  }
+);

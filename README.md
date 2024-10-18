@@ -1,50 +1,34 @@
-# React + TypeScript + Vite
+Bitpin Frontend Task
+This is the frontend implementation of a task for Bitpin, involving a trading system where users can view market details, place orders, and view transactions.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Features
+Market Listings: Users can browse available markets, with pagination and sorting based on different base currencies.
+Order and Transaction Viewing: Users can view buy/sell orders and past transactions for each market. Order details such as price, volume, and value are displayed.
+Swipe Gesture Navigation: Mobile users can navigate between tabs using swipe gestures.
+Real-time Updates: The application fetches updated order and transaction data every three seconds.
+Percentage-Based Order Entry: Users can place buy and sell orders based on percentage amounts of a selected currency.
 
-Currently, two official plugins are available:
+Technologies Used
+React: UI library for building the user interface.
+Tanstack React Query: For handling data fetching, caching, synchronization, and more.
+Zustand: For lightweight state management.
+Vite: Development environment for fast builds.
+TypeScript: Ensures type safety throughout the project.
+Tailwind CSS: For styling.
+Decimal.js: For precise decimal calculations, especially for currency values.
+React Router: For page navigation.
+React Toastify: For toast notifications.
+Swipe Gestures: Swipe functionality is implemented using native event handling for a smooth, optimized experience, inspired by the idea from react-use-gesture but without relying on external libraries.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Running the Project
+To start the development server, run:
+`pnpm dev`
 
-## Expanding the ESLint configuration
+To build the project for production:
+`pnpm build`
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+To preview the production build locally:
+`pnpm preview`
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Linting
+`pnpm lint`

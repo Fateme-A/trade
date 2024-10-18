@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  .rtl {
+    direction: rtl;
+  }
+
+  @font-face {
+    font-family: "IRANYekanXVF";
+    src: local("IRANYekanXVF"),
+    url("./assets/font/IRANYekanXVF.woff2");
+  }
+
+  .fa-num {
+    -moz-font-feature-settings: "ss02" !important;
+    -webkit-font-feature-settings: "ss02" !important;
+    font-feature-settings: "ss02" !important;
+  }
+
+  .en-num {
+    -moz-font-feature-settings: "ss00" !important;
+    -webkit-font-feature-settings: "ss00" !important;
+    font-feature-settings: "ss00" !important;
+  }
+
+
+}

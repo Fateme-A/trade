@@ -78,7 +78,7 @@ export default tseslint.config(
       "arrow-body-style": "error",
       "@typescript-eslint/consistent-type-imports": "error",
       "@typescript-eslint/no-import-type-side-effects": "error",
-      "max-params": ["error", 3],
+      "max-params": ["error", 4],
       "no-console": "warn",
       ...reactHooks.configs.recommended.rules,
       "react-refresh/only-export-components": [
